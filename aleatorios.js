@@ -13,9 +13,23 @@ function generarAleatorios() {
             let numeroAleatorio = generarNumerosAleatorio();
             aleatorios.push(numeroAleatorio);
         }
-        console.log("Números aleatorios generados:", aleatorios);
+        mostrarResultados(aleatorios);
 
     } else {
         console.log("La cantidad debe estar entre 5 y 20");
     }
+}
+
+function mostrarResultados(arregloNumeros) {
+    let contenido = "<table border='1'>";
+    contenido += "<tr><th>Número aleatorio</th></tr>";
+
+    for (let i = 0; i < arregloNumeros.length; i++) {
+        contenido += "<tr><td>" + arregloNumeros[i] + "</td></tr>";
+    }
+
+    contenido += "</table>";
+
+    let divResultados = document.getElementById("divResultados");
+    divResultados.innerHTML = contenido;
 }
