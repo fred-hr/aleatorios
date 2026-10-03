@@ -3,13 +3,17 @@ function generarNumerosAleatorio() {
 }
 
 function generarAleatorios() {
-    let aleatorio = [];
+    let aleatorios = [];
     let cantidad = parseInt(document.getElementById("txtCantidad").value);
 
-    if (cantidad >=5 && cantidad <= 20) {
-        console.log("cantidad válida: " + cantidad)
-    } else {
-        console.log("lA CANTIDAD DEBE ESTAR ENTRE 5 Y 20")
+    if (cantidad >= 5 && cantidad <= 20) {
+        console.log("cantidad válida: " + cantidad);
 
+        for (let i = 0; i < cantidad; i++) {
+            console.log(i);
+        }
+
+    } else {
+        console.log("La cantidad debe estar entre 5 y 20");
     }
 }
